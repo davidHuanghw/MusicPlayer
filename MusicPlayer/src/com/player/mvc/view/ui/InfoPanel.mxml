@@ -17,6 +17,6 @@
 			}
 		]]>
 	</mx:Script>
-	<!--<mx:TextArea id="infoTxt" top="10" width="100%" height="100%" editable="true" focusEnabled="true"
-				 styleName="info" text="开发"/>-->
+	<mx:TextArea id="infoTxt" top="10" width="100%" height="100%" editable="true" focusEnabled="true"
+				 styleName="info" text="作者：david 黄华伟 开发日期：2011年4月 "/>
 </mx:TitleWindow>
