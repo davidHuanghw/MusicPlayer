@@ -1,0 +1,233 @@
+/* CSS file */
+WindowedApplication
+{
+	fontSize: 11;
+	fontFamily: "Tohama";
+	titleTextStyleName:"titleTextStyle";
+	
+	titleBarColors:undefined;
+	headerHeight:27;
+	titleBarBackgroundSkin:Embed(source="skin_asset.swf",symbol="titleBackgroud");
+	statusBarBackgroundSkin:Embed(source="skin_asset.swf",symbol="bottomBackgroud");
+	
+	backgroundColor:undefined;
+	borderStyle:none;
+	icon:Embed(source="appIcon.png");
+}
+
+Window
+{
+	fontSize: 11;
+	fontFamily: "Tohama";
+	titleTextStyleName:"titleTextStyle";
+	
+	titleBarColors:undefined;
+	headerHeight:27;
+	titleBarBackgroundSkin:Embed(source="skin_asset.swf",symbol="lrcListTitleBackgroud");
+	statusBarBackgroundSkin:Embed(source="skin_asset.swf",symbol="bottomBackgroud");
+	
+	backgroundColor:undefined;
+	borderStyle:none;
+}
+
+.titleTextStyle
+{
+	fontSize: 12;
+	fontFamily: "Tohama";
+	fontWeight:"bold";
+}
+
+.listLittleButton
+{
+	width:20;
+	upSkin:Embed(source="skin_asset.swf",symbol="littleButtonUpSkin");
+	overSkin:Embed(source="skin_asset.swf",symbol="littleButtonOverSkin");
+	downSkin:Embed(source="skin_asset.swf",symbol="littleButtonDownSkin");
+	icon:Embed(source="skin_asset.swf",symbol="iconSkin");
+}
+
+.littleButton
+{
+	upSkin:Embed(source="skin_asset.swf",symbol="littleButtonUpSkin");
+	overSkin:Embed(source="skin_asset.swf",symbol="littleButtonOverSkin");
+	downSkin:Embed(source="skin_asset.swf",symbol="littleButtonDownSkin");
+	cornerRadius: 0;
+   	themeColor: #999999;
+	/*icon:Embed(source="skin_asset.swf",symbol="iconSkin");*/
+}
+
+.playButton
+{
+	upSkin:Embed(source="skin_asset.swf",symbol="playButtonUpSkin");
+	overSkin:Embed(source="skin_asset.swf",symbol="playButtonOverSkin");
+	downSkin:Embed(source="skin_asset.swf",symbol="playButtonOverSkin");
+}
+
+.pauseButton
+{
+	upSkin:Embed(source="skin_asset.swf",symbol="pauseButtonUpSkin");
+	overSkin:Embed(source="skin_asset.swf",symbol="pauseButtonOverSkin");
+	downSkin:Embed(source="skin_asset.swf",symbol="pauseButtonOverSkin");
+}
+
+.stopButton
+{
+	upSkin:Embed(source="skin_asset.swf",symbol="stopButtonUpSkin");
+	overSkin:Embed(source="skin_asset.swf",symbol="stopButtonOverSkin");
+	downSkin:Embed(source="skin_asset.swf",symbol="stopButtonOverSkin");
+}
+
+.prevButton
+{
+	upSkin:Embed(source="skin_asset.swf",symbol="prevButtonUpSkin");
+	overSkin:Embed(source="skin_asset.swf",symbol="prevButtonOverSkin");
+	downSkin:Embed(source="skin_asset.swf",symbol="prevButtonOverSkin");
+}
+
+.nextButton
+{
+	upSkin:Embed(source="skin_asset.swf",symbol="nextButtonUpSkin");
+	overSkin:Embed(source="skin_asset.swf",symbol="nextButtonOverSkin");
+	downSkin:Embed(source="skin_asset.swf",symbol="nextButtonOverSkin");
+}
+
+.openFileButton
+{
+	upSkin:Embed(source="skin_asset.swf",symbol="openFileButtonUpSkin");
+	overSkin:Embed(source="skin_asset.swf",symbol="openFileButtonOverSkin");
+	downSkin:Embed(source="skin_asset.swf",symbol="openFileButtonOverSkin");
+}
+
+.mainPanel
+{
+	backgroundColor:"undefined";
+}
+
+.controlPanel
+{
+	backgroundAttachment:"fixed";
+	backgroundImage:Embed(source="skin_asset.swf",symbol="controlPanelBackgroud");
+	backgroundColor:"undefined";
+}
+
+.displayPanel
+{
+	backgroundAttachment:"fixed";
+	backgroundImage:Embed(source="skin_asset.swf",symbol="displayPanelBackgroud");
+	backgroundColor:"undefined";
+}
+.displayLabel
+{
+	fontSize:12;
+	color:"0xB5F0FB";
+	textAlign:"right";
+}
+
+.timeLabel
+{
+	fontFamily:"04B_08";
+	fontSize:6;
+	color:"0xFFFFFF";
+	textAlign:"right";
+}
+.listTitle
+{
+	backgroundAttachment:"fixed";
+	backgroundImage:Embed(source="skin_asset.swf",symbol="songListTitleBackgroud");
+}
+
+.songListBox
+{
+	backgroundAttachment:"fixed";
+	backgroundImage:Embed(source="skin_asset.swf",symbol="songListPanelBackgroud");
+	backgroundSize:"100%"
+}
+
+.lrcListBox
+{
+	backgroundAttachment:"fixed";
+	backgroundImage:Embed(source="skin_asset.swf",symbol="lrcListPanelBackgroud");
+	backgroundSize:"100%"
+}
+
+.progressSlider
+{
+	trackSkin:Embed(source="skin_asset.swf",symbol="progressSliderTrackSkin");
+	trackHighlightSkin:Embed(source="skin_asset.swf",symbol="progressSliderTrackHighlightSkin");
+	thumbSkin:Embed(source="skin_asset.swf",symbol="progressSliderThumb");
+}
+
+.volumeSlider
+{
+	trackSkin:Embed(source="skin_asset.swf",symbol="volumeSliderTrackSkin");
+	trackHighlightSkin:Embed(source="skin_asset.swf",symbol="volumeSliderTrackHighlightSkin");
+	backgroundImage:Embed(source="skin_asset.swf",symbol="volumeSliderBack");
+	thumbSkin:Embed(source="skin_asset.swf",symbol="volumeSliderThumb");
+}
+.volumeSliderBox
+{
+	backgroundImage:Embed(source="skin_asset.swf",symbol="volumeSliderBack");
+}
+
+/* DataGrid
+{
+   horizontalGridLines: false;
+   verticalGridLines: false;
+   backgroundAlpha: 1;
+   backgroundColor: #51555e;
+   alternatingItemColors: #4c505b, #52565f;
+   useRollOver: true;
+   rollOverColor: #cccccc;
+   borderStyle: solid;
+   borderThickness: 2;
+   borderColor: #33363b;
+   selectionColor: #41454f;
+   color: #a8afb9;
+   textSelectedColor: #53cbff;
+   letterSpacing: 0;
+   selectionDuration: 0;
+   dropShadowEnabled: false;
+   fontFamily: Tahoma;
+   cornerRadius: 0;
+} */
+
+/* TextArea
+{
+	focusAlpha:0;
+   fontFamily: Tahoma;
+   color: #a8afb9;
+   textAlign: center;
+   paddingLeft: 5;
+   paddingRight: 5;
+   leading: 0;
+   textIndent: 0;
+   letterSpacing: 0;
+   backgroundColor: #51555e;
+   borderColor: #33363b;
+   borderThickness: 2;
+   cornerRadius: 0;
+   dropShadowEnabled: false;
+} */
+
+VScrollBar
+{
+   cornerRadius: 0;
+   highlightAlphas: 0, 0;
+   fillAlphas: 1, 1, 1, 1;
+   fillColors: #999999, #999999, #cccccc, #cccccc;
+   trackColors: #41454f, #333333;
+   themeColor: #666666;
+   borderColor: #33363b;
+   iconColor: #cccccc;
+   thumbOffset: 0;
+}
+.info
+{
+	borderStyle: solid;
+	font:"0xFF0000";
+	fontSize: 24;
+	fontFamily: "Arial";
+	fontWeight: bold;
+	textAlign: center;
+	backgroundColor:"0xCCCCCC";
+}

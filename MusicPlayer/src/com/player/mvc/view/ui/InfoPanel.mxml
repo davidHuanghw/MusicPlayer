@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml"
+				width="216" height="196" borderColor="#034850"
+				close="PopUpManager.removePopUp(this);" color="#19D2F9" horizontalAlign="center"
+				layout="vertical" showCloseButton="true" textAlign="left" creationComplete="init()"
+				title="MP3播放器说明" verticalAlign="top" xmlns:s="library://ns.adobe.com/flex/spark">
+	<mx:Script>
+		<![CDATA[
+			import mx.controls.Text;
+			import mx.core.UIComponent;
+			import mx.managers.PopUpManager;
+			private function init():void
+			{
+				var text:Text = new Text();
+				text.text = "fdfa";
+				this.addElement(text);
+			}
+		]]>
+	</mx:Script>
+	<!--<mx:TextArea id="infoTxt" top="10" width="100%" height="100%" editable="true" focusEnabled="true"
+				 styleName="info" text="开发"/>-->
+</mx:TitleWindow>

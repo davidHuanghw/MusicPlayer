@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" width="500" height="400" showCloseButton="true">
+	<mx:Script>
+		<![CDATA[
+			import mx.managers.PopUpManager;
+			import mx.containers.TitleWindow;
+			import flash.geom.Point;
+			import mx.controls.Text;
+			
+			private var point1:Point = new Point();
+			public var loginUserName:Text;
+			public var loginUserPwd:Text;
+			private function closeWin():void
+			{
+				PopUpManager.removePopUp(this);
+			}
+			
+			private function openNewWin():void
+			{
+				var login:Win1=Win1(PopUpManager.createPopUp( this, Win1 , true));
+				point1.x=(this.width-login.width)/2;
+				point1.y=(this.height-login.height)/2;          
+				login.x=point1.x+5;
+				login.y=point1.y+5;
+				
+			}
+			
+			private function loginOk():void
+			{
+				loginUserName.text=username.text;
+				PopUpManager.removePopUp(this);
+			}
+		]]>
+	</mx:Script>
+	<mx:Style>
+		Label{fontSize:12px;}
+	</mx:Style>
+	<mx:Button x="139" y="258" label="open new" click="openNewWin()"/>
+	<mx:Button x="282" y="258" label="close" click="closeWin()"/>
+	<mx:Label x="139" y="87" text="用户名："/>
+	<mx:Label x="139" y="134" text="密   码："/>
+	<mx:TextInput x="200" y="87" id="username"/>
+	<mx:TextInput x="200" y="134" id="userpwd" displayAsPassword="true"/>
+	<mx:Button x="227" y="258" label="ok" click="loginOk()"/>
+</mx:TitleWindow>

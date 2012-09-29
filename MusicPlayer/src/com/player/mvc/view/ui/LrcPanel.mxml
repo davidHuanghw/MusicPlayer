@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="254" height="398">
+	<mx:VBox width="100%" height="100%" verticalGap="0">
+		<mx:Image width="100%" height="25" source="@Embed(source='style/skin_asset.swf', symbol='lrcListTitleBackgroud')"/>
+		<mx:Box width="100%" height="328" horizontalAlign="center" verticalAlign="middle"
+				 styleName="lrcListBox" verticalGap="0">
+			<mx:TextArea id="lrcText" width="244" height="318" editable="false" enabled="true" textAlign="center"/>
+		</mx:Box>
+	</mx:VBox>
+</mx:Canvas>

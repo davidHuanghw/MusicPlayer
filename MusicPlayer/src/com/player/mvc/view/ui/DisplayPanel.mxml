@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="244" height="74" styleName="displayPanel" xmlns:component="com.player.mvc.component.*"
+		    >
+	<component:Visualization  width="100%" height="50" x="5" y="5" id="visualization"/>
+	<mx:Label x="119" y="5" width="120" id="songNameLabel" styleName="displayLabel"/>
+	<mx:Label x="118" y="21" width="120" id="artistLabel" styleName="displayLabel"/>
+	<mx:Label x="10" y="49" width="228" id="lrcLabel" styleName="displayLabel" showEffect="lrcEffect"/>
+</mx:Canvas>

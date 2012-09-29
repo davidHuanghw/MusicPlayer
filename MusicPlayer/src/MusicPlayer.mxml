@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:WindowedApplication xmlns:mx="http://www.adobe.com/2006/mxml" width="510" height="400"
+	layout="absolute" xmlns:ui="com.player.mvc.view.ui.*" creationComplete="init()">
+	
+	<mx:Style source="style/asset_style.css"/>
+	
+	<mx:Script>
+		<![CDATA[
+			import com.player.mvc.core.AppFacade;
+			import com.player.mvc.utils.SysTrayMgr;
+			import com.player.mvc.view.ui.InfoPanel;
+			
+			import mx.controls.Alert;
+			import mx.controls.Button;
+			import mx.controls.Text;
+			import mx.managers.PopUpManager;
+			
+			import spark.components.Panel;
+			import spark.components.TitleWindow;
+			[Embed(source="/style/icon/appIcon16.png")]
+			private var myIcon:Class;
+			private function init():void {
+				var facade:AppFacade = AppFacade.getInstance();
+				facade.startup( this );
+				addEventListener(NativeWindowDisplayStateEvent.DISPLAY_STATE_CHANGE,sysTrayHandler);
+				titleIcon = myIcon;
+				titleBar.addEventListener(MouseEvent.RIGHT_CLICK,rightClick);
+			}		
+			/**
+			 * 最小化到托盤處理
+			 * @param evt
+			 * 
+			 */		 
+			private function sysTrayHandler(evt:NativeWindowDisplayStateEvent):void
+			{
+				if(evt.afterDisplayState == NativeWindowDisplayState.MINIMIZED)
+					SysTrayMgr.minimize(this);
+			}
+			private function rightClick(evt:MouseEvent):void
+			{
+				var menu:ContextMenu = new ContextMenu();
+				var menuItem:ContextMenuItem = new ContextMenuItem("关于..");
+				menuItem.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT,showInfo);				
+				menu.items.push(menuItem);
+				titleBar.contextMenu = menu;
+			}
+			private function showInfo(evt:ContextMenuEvent):void
+			{
+				var infoPanel:InfoPanel = InfoPanel(PopUpManager.createPopUp(this,InfoPanel,true));
+				infoPanel.isPopUp = true;
+				PopUpManager.centerPopUp(infoPanel); 
+			}
+		]]>
+	</mx:Script>
+	<mx:Image width="100%" height="25" source="@Embed(source='style/skin_asset.swf', symbol='titleBackgroud')" x="0"/>
+	<mx:HBox width="100%" height="100%" horizontalGap="0">		
+		<mx:VBox width="50%" height="100%" verticalGap="0" styleName="mainPanel">
+			 <ui:ControlPanel id="controlPanel" width="100%" height="174" />
+			 <ui:SongListPanel id="songListPanel" width="100%" height="100%" />
+		</mx:VBox>
+		<ui:LrcPanel id="lrcPanel" width="50%" height="100%"/>
+	</mx:HBox>
+		
+</mx:WindowedApplication>
